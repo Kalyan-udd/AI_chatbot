@@ -11,3 +11,5 @@ wheels/
 .lock
 .env
 tests/
+vector_db/
+Database.db

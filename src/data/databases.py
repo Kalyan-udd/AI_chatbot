@@ -67,6 +67,7 @@ class DatabaseManipulation:
             rows = cursor.fetchall()
         return [{"session_id":row[0], "title":row[1], "updated_at":row[2]}for row in rows]
 
+
     def delete_session(self, session_id:str) -> str:
         with self.get_connection() as conn:
             cursor = conn.cursor()
