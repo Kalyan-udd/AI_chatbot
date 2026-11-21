@@ -4,10 +4,12 @@ import uuid
 from rag.embedding import EmbeddingPDFs
 
 RAG = Path(__file__).resolve().parent
+vector_db = Path(f"{RAG}/vector_db")
+vector_db.mkdir(exist_ok=True)
 
 class VectorDB:
     def __init__(self) -> None:
-        self.chroma_client = chromadb.PersistentClient(path=f"{RAG}/vector_db")
+        self.chroma_client = chromadb.PersistentClient(path=vector_db)
         self.collection = self.chroma_client.get_or_create_collection(name="local_pdf_rag")
 
     def store_dataset_in_chroma(self,dataset:list[dict])->str:
