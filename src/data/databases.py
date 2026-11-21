@@ -1,12 +1,15 @@
 import sqlite3
 import uuid
 from pathlib import Path
+import os
 
 ROOT = Path(__file__).resolve().parent.parent.parent
+database_path = Path(f"{ROOT}/src/data/Database.db")
+database_path.touch(exist_ok=True)
 
 class DatabaseManipulation:
     def __init__(self) -> None:
-        self.path = f"{ROOT}/src/data/Database.db"
+        self.path = database_path
         self.init_db()
 
     def get_connection(self):
