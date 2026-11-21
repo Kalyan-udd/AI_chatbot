@@ -19,7 +19,7 @@ A fully local, privacy-focused AI chatbot built from scratch using Hugging Face 
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
+   git clone [https://github.com/Kalyan-udd/AI_chatbot.git](https://github.com/Kalyan-udd/AI_chatbot.git)
    cd your-repo-name
    ```
 
